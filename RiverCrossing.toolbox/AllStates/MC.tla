@@ -2,17 +2,17 @@
 EXTENDS RiverCrossing, TLC
 
 \* SPECIFICATION definition @modelBehaviorSpec:0
-spec_1510781877258416000 ==
+spec_151086576867793000 ==
 Spec
 ----
 \* INVARIANT definition @modelCorrectnessInvariants:0
-inv_1510781877258417000 ==
+inv_151086576867794000 ==
 TypeOK
 ----
 \* INVARIANT definition @modelCorrectnessInvariants:1
-inv_1510781877258418000 ==
+inv_151086576867795000 ==
 NothingEatenNow
 ----
 =============================================================================
 \* Modification History
-\* Created Wed Nov 15 16:37:57 EST 2017 by dgregoire
+\* Created Thu Nov 16 15:56:08 EST 2017 by dgregoire

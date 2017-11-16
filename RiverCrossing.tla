@@ -97,6 +97,8 @@ NothingGetsEaten == NothingEatenNow /\ NothingEatenNext
 MoveItem(item, start, finish) ==
     \* The farmer finds himself on a given `start' riverbank
     /\ "farmer" \in start
+    \* The item also finds itself on a given `start' riverbank
+    /\ item \in start
     \* He leaves `start' with himself and one `item'
     /\ start' = start \ {item, "farmer"}
     \* He immediately takes that `item' and himself to `finish' riverbank
@@ -105,18 +107,21 @@ MoveItem(item, start, finish) ==
     /\ NothingGetsEaten
 
 (***************************************************************************)
-(* Operations for moving specific items to/from riverbankstart and riverbankfinish. *)
+(* The farmer may travel to another bank without taking anything with him. *)
 (***************************************************************************)
-MoveItemAZ(item) == MoveItem(item, riverbankstart, riverbankfinish)
-MoveItemZA(item) == MoveItem(item, riverbankfinish, riverbankstart)
+Go(start,finish) ==
+    /\ "farmer" \in start
+    /\ start' = start \ {"farmer"}
+    /\ finish' = finish \cup {"farmer"}
 
-MoveFoxAZ   == MoveItemAZ("fox")
-MoveFoxZA   == MoveItemZA("fox")
-MoveGooseAZ == MoveItemAZ("goose")
-MoveGooseZA == MoveItemZA("goose")
-MoveBeansAZ == MoveItemAZ("beans")
-MoveBeansZA == MoveItemZA("beans")
-                      
+(***************************************************************************)
+(* If he does that, we still need to ensure nothing gets eaten.            *)
+(***************************************************************************)
+GoEmptyHanded ==
+    /\ \/ Go(riverbankstart, riverbankfinish)
+       \/ Go(riverbankfinish, riverbankstart)
+    /\ NothingGetsEaten
+                    
 ----------
                       
 \* `^\Large{Spec}^'
@@ -131,12 +136,11 @@ Init == /\ riverbankstart = Actors
 (* We can move items from one bank to the other, maintaining the safety    *)
 (* invariant that nothing gets eaten.                                      *)
 (***************************************************************************)
-Next == \/ MoveFoxAZ
-        \/ MoveFoxZA
-        \/ MoveGooseAZ
-        \/ MoveGooseZA
-        \/ MoveBeansAZ
-        \/ MoveBeansZA
+Next == \/ \E item \in riverbankstart \ {"farmer"} :
+                MoveItem(item, riverbankstart, riverbankfinish)
+        \/ \E item \in riverbankfinish \ {"farmer"} :
+                MoveItem(item, riverbankfinish, riverbankstart)
+        \/ GoEmptyHanded
         
 (***************************************************************************)
 (* Temporal formula that is the specification of the system.  If true,     *)
@@ -158,5 +162,5 @@ SolutionInvariant == riverbankfinish /= Actors
 
 =============================================================================
 \* Modification History
-\* Last modified Wed Nov 15 16:57:35 EST 2017 by dgregoire
+\* Last modified Thu Nov 16 15:56:03 EST 2017 by dgregoire
 \* Created Tue Nov 14 15:18:30 EST 2017 by dgregoire
