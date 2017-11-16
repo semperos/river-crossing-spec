@@ -21,7 +21,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2017-11-15 16:37:57)
+Starting... (2017-11-16 15:56:09)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -33,33 +33,39 @@ Finished computing initial states: 1 distinct state generated.
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 7.0E-18
+  calculated (optimistic):  val = 8.5E-18
   based on the actual fingerprints:  val = 2.5E-17
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2017-11-15 16:38:01
+The coverage statistics at 2017-11-16 15:56:12
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 100, col 8 to line 100, col 45 of module RiverCrossing: 22
+  line 103, col 8 to line 103, col 40 of module RiverCrossing: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 98, col 8 to line 98, col 40 of module RiverCrossing: 22
+  line 105, col 8 to line 105, col 45 of module RiverCrossing: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 114, col 8 to line 114, col 34 of module RiverCrossing: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 115, col 8 to line 115, col 39 of module RiverCrossing: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(8) at 2017-11-15 16:38:01: 23 states generated (381 s/min), 10 distinct states found (165 ds/min), 0 states left on queue.
+Progress(9) at 2017-11-16 15:56:12: 25 states generated (506 s/min), 12 distinct states found (243 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-23 states generated, 10 distinct states found, 0 states left on queue.
+25 states generated, 12 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 8.
+The depth of the complete state graph search is 9.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 3925ms at (2017-11-15 16:38:01)
+Finished in 3163ms at (2017-11-16 15:56:12)
 @!@!@ENDMSG 2186 @!@!@

@@ -21,7 +21,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2017-11-15 16:38:06)
+Starting... (2017-11-16 15:56:17)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -30,76 +30,82 @@ Computing initial states...
 Finished computing initial states: 1 distinct state generated.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2110:1 @!@!@
-Invariant inv_1510781885670422000 is violated.
+Invariant inv_151086577689499000 is violated.
 @!@!@ENDMSG 2110 @!@!@
 @!@!@STARTMSG 2121:1 @!@!@
 The behavior up to this point is:
 @!@!@ENDMSG 2121 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 1: <Initial predicate>
-/\ riverbankz = {}
-/\ riverbanka = {"farmer", "fox", "goose", "beans"}
+/\ riverbankfinish = {}
+/\ riverbankstart = {"farmer", "fox", "goose", "beans"}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-2: <Action line 104, col 21 to line 104, col 58 of module RiverCrossing>
-/\ riverbankz = {"farmer", "goose"}
-/\ riverbanka = {"fox", "beans"}
+2: <Action line 139, col 12 to line 140, col 63 of module RiverCrossing>
+/\ riverbankfinish = {"farmer", "goose"}
+/\ riverbankstart = {"fox", "beans"}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-3: <Action line 105, col 21 to line 105, col 58 of module RiverCrossing>
-/\ riverbankz = {"goose"}
-/\ riverbanka = {"farmer", "fox", "beans"}
+3: <Action line 121, col 5 to line 123, col 23 of module RiverCrossing>
+/\ riverbankfinish = {"goose"}
+/\ riverbankstart = {"farmer", "fox", "beans"}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-4: <Action line 104, col 21 to line 104, col 58 of module RiverCrossing>
-/\ riverbankz = {"farmer", "fox", "goose"}
-/\ riverbanka = {"beans"}
+4: <Action line 139, col 12 to line 140, col 63 of module RiverCrossing>
+/\ riverbankfinish = {"farmer", "fox", "goose"}
+/\ riverbankstart = {"beans"}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-5: <Action line 105, col 21 to line 105, col 58 of module RiverCrossing>
-/\ riverbankz = {"fox"}
-/\ riverbanka = {"farmer", "goose", "beans"}
+5: <Action line 141, col 12 to line 142, col 63 of module RiverCrossing>
+/\ riverbankfinish = {"fox"}
+/\ riverbankstart = {"farmer", "goose", "beans"}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-6: <Action line 104, col 21 to line 104, col 58 of module RiverCrossing>
-/\ riverbankz = {"farmer", "fox", "beans"}
-/\ riverbanka = {"goose"}
+6: <Action line 139, col 12 to line 140, col 63 of module RiverCrossing>
+/\ riverbankfinish = {"farmer", "fox", "beans"}
+/\ riverbankstart = {"goose"}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-7: <Action line 105, col 21 to line 105, col 58 of module RiverCrossing>
-/\ riverbankz = {"fox", "beans"}
-/\ riverbanka = {"farmer", "goose"}
+7: <Action line 121, col 5 to line 123, col 23 of module RiverCrossing>
+/\ riverbankfinish = {"fox", "beans"}
+/\ riverbankstart = {"farmer", "goose"}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-8: <Action line 104, col 21 to line 104, col 58 of module RiverCrossing>
-/\ riverbankz = {"farmer", "fox", "goose", "beans"}
-/\ riverbanka = {}
+8: <Action line 139, col 12 to line 140, col 63 of module RiverCrossing>
+/\ riverbankfinish = {"farmer", "fox", "goose", "beans"}
+/\ riverbankstart = {}
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2017-11-15 16:38:07
+The coverage statistics at 2017-11-16 15:56:18
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 100, col 8 to line 100, col 45 of module RiverCrossing: 20
+  line 103, col 8 to line 103, col 40 of module RiverCrossing: 15
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 98, col 8 to line 98, col 40 of module RiverCrossing: 20
+  line 105, col 8 to line 105, col 45 of module RiverCrossing: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 114, col 8 to line 114, col 34 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 115, col 8 to line 115, col 39 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(8) at 2017-11-15 16:38:07: 21 states generated (1,304 s/min), 10 distinct states found (621 ds/min), 0 states left on queue.
+Progress(8) at 2017-11-16 15:56:18: 21 states generated (1,607 s/min), 11 distinct states found (841 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-21 states generated, 10 distinct states found, 0 states left on queue.
+21 states generated, 11 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
 The depth of the complete state graph search is 8.
@@ -108,5 +114,5 @@ The depth of the complete state graph search is 8.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 1225ms at (2017-11-15 16:38:07)
+Finished in 990ms at (2017-11-16 15:56:18)
 @!@!@ENDMSG 2186 @!@!@
