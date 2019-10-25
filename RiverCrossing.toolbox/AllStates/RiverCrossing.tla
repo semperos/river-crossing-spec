@@ -1,18 +1,18 @@
 --------------------------- MODULE RiverCrossing ---------------------------
 (***************************************************************************)
 (* This specification describes a history of the universe where the rules  *)
-(* of the "Fox, goose, and bag of beans" puzzle are enforced.  As taken    *)
-(* from Wikipedia                                                          *)
-(* (https://en.wikipedia.org/wiki/Fox,_goose_and_bag_of_beans_puzzle):     *)
+(* of the "Wolf, goat, and cabbage" puzzle are enforced.  As taken from    *)
+(* Wikipedia                                                               *)
+(* (https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem):         *)
 (*                                                                         *)
 (* `^ \begin{verse} Once upon a time a farmer went to a market and         *)
-(* purchased a fox, a goose, and a bag of beans.  On his way home, the     *)
-(* farmer came to the bank of a river and rented a boat.  But in crossing  *)
-(* the river by boat, the farmer could carry only himself and a single one *)
-(* of his purchases: the fox, the goose, or the bag of beans.              *)
+(* purchased a wolf, a goat, and a cabbage.  On his way home, the farmer   *)
+(* came to the bank of a river and rented a boat.  But in crossing the     *)
+(* river by boat, the farmer could carry only himself and a single one of  *)
+(* his purchases: the wolf, the goat, or the cabbage.                      *)
 (*                                                                         *)
-(* If left unattended together, the fox would eat the goose, or the goose  *)
-(* would eat the beans.                                                    *)
+(* If left unattended together, the wolf would eat the goat, or the goat   *)
+(* would eat the cabbage.                                                  *)
 (*                                                                         *)
 (* The farmer's challenge was to carry himself and his purchases to the    *)
 (* far bank of the river, leaving each purchase intact.  How did he do it? *)
@@ -25,8 +25,8 @@
 (* \item \emph{TypeOK}: Type invariant that ensures the river banks are    *)
 (* represented by the actors on them.                                      *)
 (*                                                                         *)
-(* \item \emph{NothingEatenNow}: Invariant that ensures the fox doesn't    *)
-(* eat the goose and the goose doesn't eat the beans.                      *)
+(* \item \emph{NothingEatenNow}: Invariant that ensures the wolf doesn't   *)
+(* eat the goat and the goat doesn't eat the cabbage.                      *)
 (*                                                                         *)
 (* \item \emph{SolutionInvariant}: An invariant that we know does not      *)
 (* hold, because this puzzle has a solution.  By adding it as an invariant *)
@@ -52,7 +52,7 @@ VARIABLES riverbankstart, riverbankfinish
 (***************************************************************************)
 (* All the actors in this puzzle.                                          *)
 (***************************************************************************)
-Actors == { "farmer", "fox", "goose", "beans" }
+Actors == { "farmer", "wolf", "goat", "cabbage" }
 
 (***************************************************************************)
 (* Riverbanks are represented by the actors on them.  The boat, though     *)
@@ -76,11 +76,11 @@ PrintVariables == PrintT(<<"Start was", riverbankstart, " and is now ", riverban
                            "Finish was", riverbankfinish, " and is now ", riverbankfinish'>>)
 
 (***************************************************************************)
-(* Items are only safe when the fox isn't left alone with the goose and    *)
-(* the goose isn't left alone with the beans.                              *)
+(* Items are only safe when the wolf isn't left alone with the goat and    *)
+(* the goat isn't left alone with the cabbage.                             *)
 (***************************************************************************)
-ItemsAreSafe(riverbank) == /\ riverbank /= {"fox", "goose"}
-                           /\ riverbank /= {"goose", "beans"}
+ItemsAreSafe(riverbank) == /\ riverbank /= {"wolf", "goat"}
+                           /\ riverbank /= {"goat", "cabbage"}
 
 (***************************************************************************)
 (* Ensure things don't get eaten on either bank, either in current state   *)
@@ -127,7 +127,8 @@ GoEmptyHanded ==
 \* `^\Large{Spec}^'
 
 (***************************************************************************)
-(* We begin with all items on riverbankstart and nothing on riverbankfinish.        *)
+(* We begin with all items on riverbankstart and nothing on                *)
+(* riverbankfinish.                                                        *)
 (***************************************************************************)
 Init == /\ riverbankstart = Actors
         /\ riverbankfinish = {}
@@ -162,5 +163,6 @@ SolutionInvariant == riverbankfinish /= Actors
 
 =============================================================================
 \* Modification History
+\* Last modified Fri Oct 25 09:51:59 EDT 2019 by daniel
 \* Last modified Thu Nov 16 15:56:03 EST 2017 by dgregoire
 \* Created Tue Nov 14 15:18:30 EST 2017 by dgregoire

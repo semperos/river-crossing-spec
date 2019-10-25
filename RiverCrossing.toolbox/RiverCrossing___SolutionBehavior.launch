@@ -6,12 +6,12 @@
     <intAttribute key="dfidDepth" value="100"/>
     <booleanAttribute key="dfidMode" value="false"/>
     <intAttribute key="distributedFPSetCount" value="0"/>
-    <stringAttribute key="distributedNetworkInterface" value="172.24.12.168"/>
+    <stringAttribute key="distributedNetworkInterface" value="192.168.1.94"/>
     <intAttribute key="distributedNodesCount" value="1"/>
     <stringAttribute key="distributedTLC" value="off"/>
     <stringAttribute key="distributedTLCVMArgs" value=""/>
     <intAttribute key="fpBits" value="1"/>
-    <intAttribute key="fpIndex" value="1"/>
+    <intAttribute key="fpIndex" value="124"/>
     <intAttribute key="maxHeapSize" value="25"/>
     <intAttribute key="maxSetSize" value="1000000"/>
     <booleanAttribute key="mcMode" value="true"/>
@@ -19,8 +19,8 @@
     <stringAttribute key="modelBehaviorNext" value=""/>
     <stringAttribute key="modelBehaviorSpec" value="Spec"/>
     <intAttribute key="modelBehaviorSpecType" value="1"/>
-    <stringAttribute key="modelBehaviorVars" value="riverbankz, riverbanka"/>
-    <stringAttribute key="modelComments" value=""/>
+    <stringAttribute key="modelBehaviorVars" value="riverbankfinish, riverbankstart"/>
+    <stringAttribute key="modelComments" value="This model solves the puzzle by attempting to enforce an invariant that assumes the solution does not hold."/>
     <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
     <listAttribute key="modelCorrectnessInvariants">
         <listEntry value="1TypeOK"/>
@@ -42,6 +42,7 @@
     <intAttribute key="simuDepth" value="100"/>
     <intAttribute key="simuSeed" value="-1"/>
     <stringAttribute key="specName" value="RiverCrossing"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
     <stringAttribute key="view" value=""/>
     <booleanAttribute key="visualizeStateGraph" value="false"/>
 </launchConfiguration>
